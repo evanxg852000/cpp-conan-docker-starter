@@ -1,0 +1,12 @@
+[requires]
+Poco/1.8.0.1@pocoproject/stable
+boost/1.68.0@conan/stable
+fmt/5.2.0@bincrafters/stable
+sqlite3/3.21.0@bincrafters/stable
+catch2/2.4.0@bincrafters/stable
+jsonformoderncpp/3.3.0@vthiery/stable
+FakeIt/2.0.5@gasuketsu/stable
+Args/5.0.1.4@igormironchik/stable
+
+[generators]
+cmake
