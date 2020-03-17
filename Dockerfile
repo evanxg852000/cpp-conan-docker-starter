@@ -1,4 +1,4 @@
-FROM gcc:7.3.0
+FROM gcc:9.3.0
 
 RUN apt-get update; \
 	apt-get install -y --no-install-recommends \
@@ -6,7 +6,7 @@ RUN apt-get update; \
     python3-setuptools \
     python3-pip
 
-# Install CMake 3.10
+# Install CMake 3.12
 RUN wget -q https://cmake.org/files/v3.12/cmake-3.12.0.tar.gz -O- \
     | tar -C /tmp -xz && cd /tmp/cmake-3.12.0/ && ./bootstrap && \
     make && make install && cd && rm -rf /tmp/cmake-3.12.0
@@ -26,8 +26,8 @@ RUN conan install ..  -s build_type=Release --build
 
 COPY . /usr/project
 RUN cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
-RUN cmake --build .
+#RUN cmake --build .
 WORKDIR /usr/project
 
 ENTRYPOINT ["./entrypoint.sh"]
-CMD ["run"]
+CMD ["bash"]

@@ -41,8 +41,11 @@ case "$1" in
   ;;
 
   run )
+    ./build/bin/cli
+  ;;
+
+  test )
     ./build/bin/tests
-    ./build/bin/app
   ;;
 
   * )

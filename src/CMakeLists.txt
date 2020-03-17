@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.9)
 
-add_subdirectory(core)
-add_subdirectory(main)
+add_subdirectory(math)
+add_subdirectory(strings)
 
-include_directories(${VENDOR_DIR})
-include_directories(${SOURCE_DIR})
+# include_directories(${VENDOR_DIR})
+# include_directories(${INCLUDE_DIR})
