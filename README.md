@@ -1,6 +1,6 @@
 # A C++ docker base project
 This docker image will serve as your base c++ project structure.
-It uses cmake with the conan package manager, all your compilation and test will be run inside a docker image base on GCC7.3.0  
+It uses cmake with the conan package manager, all your compilation and test will be run inside a docker image base on GCC 9.3.0  
 
 ## Registry
 
@@ -30,8 +30,8 @@ docker-compose up
 docker build -t cppimage .
 docker run -v "$PWD":"/usr/project" cppimage build
 conan install ..  -s build_type=Release --build
-RUN cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
-RUN cmake --build .
+cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+cmake --build .
 ``` 
 
 
