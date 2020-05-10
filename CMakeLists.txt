@@ -27,7 +27,6 @@ add_subdirectory(tests)
 enable_testing()
 
 #enable_testing()
-
 #include_directories(include)
 #include_directories(${SOURCE_DIR})
 #add_executable(app main.cc)

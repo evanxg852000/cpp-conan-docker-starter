@@ -12,7 +12,8 @@ https://bintray.com/conan/conan-center
 - poco: https://pocoproject.org
 - json: https://github.com/nlohmann/json
 - fmt: https://github.com/fmtlib/fmt
-- zlib:
+- zlib: https://www.zlib.net/
+- asio: https://think-async.com/Asio
 - catch2: https://github.com/catchorg/Catch2
 - sqlite3: https://www.sqlite.org
 
