@@ -3,4 +3,9 @@ services:
    app:
     build: .
     volumes:
-      - ./src:/usr/project/src
+      - ./:/usr/project
+    ports:
+      - 8080
+      - 8181
+      - 5000s
+      - 3000

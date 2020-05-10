@@ -10,12 +10,13 @@ https://bintray.com/conan/conan-center
 
 - boost: https://www.boost.org/
 - poco: https://pocoproject.org
-- crow: https://github.com/ipkn/crow
-- args: https://github.com/jarro2783/cxxopts
 - json: https://github.com/nlohmann/json
 - fmt: https://github.com/fmtlib/fmt
+- zlib:
 - catch2: https://github.com/catchorg/Catch2
 - sqlite3: https://www.sqlite.org
+
+- crow: https://github.com/ipkn/crow
 - cxxopts: https://github.com/jarro2783/cxxopts
 - spdlog: https://github.com/gabime/spdlog
 
@@ -28,6 +29,10 @@ docker-compose up
 
 ```bash
 docker build -t cppimage .
+docker run -it -v "$PWD":"/usr/project" cppimage bash
+```
+
+```bash
 docker run -v "$PWD":"/usr/project" cppimage build
 conan install ..  -s build_type=Release --build
 cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release

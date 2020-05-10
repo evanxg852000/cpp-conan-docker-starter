@@ -29,5 +29,6 @@ RUN cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
 #RUN cmake --build .
 WORKDIR /usr/project
 
+EXPOSE 8080 8181 5000 3000
 ENTRYPOINT ["./entrypoint.sh"]
 CMD ["bash"]
